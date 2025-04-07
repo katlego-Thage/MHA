@@ -11,7 +11,7 @@ namespace MHA.Models
         public void Run()
         {
             var map = File.ReadAllLines("guard.txt"); //Note: Load Guard Data From A Text File Stored On ".bin" Folder 
-
+                                                      //Due To The Size Of Data That is On The File, It Take Longer To Execute. The Data In The File Is Reduced To See / Print Results
             try
             {
                 int rows = map.Length;
@@ -80,7 +80,7 @@ namespace MHA.Models
                     }
                 }
 
-                Console.WriteLine($"Distinct positions visited: {visited.Count}");
+                Console.WriteLine($"Distinct Positions Visited: {visited.Count}");
             }
             catch 
             {
