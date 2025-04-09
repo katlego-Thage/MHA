@@ -65,6 +65,8 @@ namespace MHA.Models
                 }
 
                 Console.WriteLine($"Sum Of Middle Values From Valid Updates: {validMiddles.Sum()}");
+
+                Logger.Log($"Sum Of Middle Values From Valid Updates: {validMiddles.Sum()}");
             }
             catch(Exception)
             {

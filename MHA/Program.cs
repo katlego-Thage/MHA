@@ -20,6 +20,8 @@ namespace HistorianHysteria
             Console.WriteLine("4 - Day 4: Challenge ");
             Console.WriteLine("5 - Day 5: Challenge ");
             Console.WriteLine("6 - Day 6: Challenge ");
+            Console.WriteLine("7 - Day 7: Challenge ");
+
             Console.Write("Enter 1,2,3,4..... ");
 
             IServiceChallenge? challenge = Console.ReadLine()?.Trim() switch
@@ -30,6 +32,7 @@ namespace HistorianHysteria
                     "4" => new XmasChallenge(),
                     "5" => new PrintQueueChallenge(),
                     "6" => new GuardChallenge(),
+                    "7" => new BridgeChallenge(),
                     _ => null
                 };
 
