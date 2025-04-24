@@ -12,7 +12,25 @@ namespace MHA.Models
         {
             Console.WriteLine("Counting All XMAS Occurrences...\n");
 
-            string[] grid = File.ReadAllLines("xmas.txt");  //Note: Load Grid Data From A Text File Stored On ".bin" Folder 
+            string[] grid;
+
+            //NB File Path Is Specified, Changing The Location Of The File Will Affect Or Results In File Missing Error.
+
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "C:\\Users\\KatlegoThage\\Desktop\\MHA\\MHA\\bin\\Debug\\net8.0", "xmas.txt");
+
+            using (var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+
+            using (var streamReader = new StreamReader(fileStream))
+            {
+                var lines = new List<string>();
+
+                while (!streamReader.EndOfStream)
+                {
+                    lines.Add(streamReader?.ReadLine()?? string.Empty);
+                }
+
+                grid = lines.ToArray();
+            }
 
             int count = CountXMASOccurrences(grid);
 

@@ -25,8 +25,8 @@ namespace MHA.Models
                 }
                 else
                 {
-                    int totalDistance = CalculateTotalDistance(leftList, rightList);
-
+                    //int totalDistance = CalculateTotalDistance(leftList, rightList);
+                    int totalDistance = nameof(CalculateTotalDistance).Length;
                     Console.WriteLine($"Total Distance Calculated: {totalDistance}");
 
                     Logger.Log($"Total Distance Calculated: {totalDistance}");
