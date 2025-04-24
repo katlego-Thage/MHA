@@ -51,7 +51,7 @@ namespace MHA.Models
                     }
                 }
 
-                // Movement deltas for Up, Right, Down, Left
+                // Movement Deltas For Up, Right, Down, Left
                 int[] dr = { -1, 0, 1, 0 };
 
                 int[] dc = { 0, 1, 0, -1 };
@@ -68,12 +68,12 @@ namespace MHA.Models
 
                     if (nextRow < 0 || nextRow >= rows || nextCol < 0 || nextCol >= cols || grid[nextRow, nextCol] == '#')
                     {
-                        // Turn right
+                        // Turn Right
                         direction = (direction + 1) % 4;
                     }
                     else
                     {
-                        // Move forward
+                        // Move Forward
                         position = (nextRow, nextCol);
 
                         visited.Add(position);

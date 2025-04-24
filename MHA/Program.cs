@@ -44,6 +44,7 @@ namespace HistorianHysteria
                     "4" => new XmasChallenge(),
                     "5" => new PrintQueueChallenge(),
                     "6" => new GuardChallenge(),
+                    "7" => new BridgeChallenge(),
                     _ => null
                 };
 
